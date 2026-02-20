@@ -1,0 +1,15 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "env": {
+    "VITE_APPWRITE_ENDPOINT": "@vite_appwrite_endpoint",
+    "VITE_APPWRITE_PROJECT_ID": "@vite_appwrite_project_id",
+    "VITE_APPWRITE_DATABASE_ID": "@vite_appwrite_database_id",
+    "VITE_APPWRITE_COLLECTION_PRODUCTS": "@vite_appwrite_collection_products",
+    "VITE_APPWRITE_COLLECTION_ORDERS": "@vite_appwrite_collection_orders",
+    "VITE_APPWRITE_COLLECTION_USERS": "@vite_appwrite_collection_users",
+    "VITE_APPWRITE_BUCKET_ID": "@vite_appwrite_bucket_id",
+    "VITE_APPWRITE_ADMIN_TEAM_ID": "@vite_appwrite_admin_team_id",
+    "VITE_RESEND_API_KEY": "@vite_resend_api_key"
+  }
+}
