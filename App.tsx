@@ -10,12 +10,22 @@ import { ShopModal } from './ui/ShopModal';
 import { NeonVanguard } from './game/NeonVanguard';
 import { useStore } from './store/useStore';
 import { useAppwriteSync } from './hooks/useAppwrite';
+import { DebugPage } from './DEBUG';
 
 function App() {
   const scene = useStore(state => state.scene);
   
+  // Vérifier si les variables d'environnement sont chargées
+  const hasRequiredEnv = import.meta.env.VITE_APPWRITE_PROJECT_ID && 
+                         import.meta.env.VITE_APPWRITE_DATABASE_ID;
+  
   // Synchroniser avec Appwrite au démarrage
   useAppwriteSync();
+
+  // Si les variables d'environnement ne sont pas chargées, afficher la page de debug
+  if (!hasRequiredEnv) {
+    return <DebugPage />;
+  }
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black text-white">
