@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { SceneCanvas } from './canvas/SceneCanvas';
 import { ProductOverlay } from './ui/ProductOverlay';
 import { AdminPanel } from './ui/AdminPanel';
@@ -48,6 +49,9 @@ function App() {
       <CartSidebar />
       <CheckoutModal />
       <AdminPanel />
+      
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
     </div>
   );
 }
